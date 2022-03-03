@@ -19,9 +19,7 @@ public class EmployeeController {
 	@Autowired
 	   private EmployeeDAO employeeDao;
 	       
-	        // Implementing a GET method
-	        // to get the list of all
-	        // the employees
+	      
 	   @GetMapping(path="/",produces="application/json")
 	  
 	    public Employees getEmployees()
@@ -32,17 +30,14 @@ public class EmployeeController {
 	    }
 	  
 	       
-	        // Create a POST method
-	        // to add an employee
-	        // to the list
+	        
 	   @PostMapping(path="/",consumes ="application/json",produces="application/json")
 	  
 	    public ResponseEntity<Object> addEmployee(
 	        @RequestBody Employee employee)
 	    {
 	  
-	        // Creating an ID of an employee
-	        // from the number of employees
+	        
 	        Integer id = employeeDao.getAllEmployees().getEmployeeList().size()+ 1;
 	  
 	        employee.setId(id);
