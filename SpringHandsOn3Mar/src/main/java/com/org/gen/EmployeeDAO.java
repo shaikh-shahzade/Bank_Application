@@ -29,8 +29,7 @@ public class EmployeeDAO {
 
 	    public void addEmployee(Employee employee)
 		{
-		    list.getEmployeeList()
-		        .add(employee);
+		    list.getEmployeeList().add(employee);
 		       
 		}
 	
